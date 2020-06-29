@@ -7,7 +7,7 @@ RUN := pipenv run
 PY := ${RUN} python
 
 ifneq ($(OS),Windows_NT)
-	VERIFY_USERNAMES=${HERE}/verify_usernames.sh
+	VERIFY_USERNAMES="${HERE}/verify_usernames.sh"
 else
 	VERIFY_USERNAMES=echo '*** cannot verify usernames on Windows, skipping... ***'
 endif
