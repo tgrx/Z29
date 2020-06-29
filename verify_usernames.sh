@@ -70,16 +70,8 @@ rm -rf solutions/__pycache__
 
 # checks
 
-assert_names || abort "MESS WITH HOMEWORKS USERS"
-
-#pipenv run pytest solutions/ || abort "PYTEST IS NOT HAPPY"
-pipenv run pytest checks/ || abort "ALEX'S TESTS ARE NOT HAPPY"
-pipenv run black --check . || abort "BLACK IS NOT HAPPY"
-pipenv run flake8 || abort "FLAKE8 IS NOT HAPPY"
-pipenv run pylint solutions/ checks/ || abort "PYLINT IS NOT HAPPY"
-
+assert_names || abort "MESS WITH USERS NAMES"
 
 # ---------------------------------------------------------
 trap : 0
 # ---------------------------------------------------------
-

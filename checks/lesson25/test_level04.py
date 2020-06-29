@@ -1,5 +1,7 @@
 # pylint: disable=C0103,C0122
 
+from project.consts import SEP
+
 
 def verify_class_structure(klass):
     assert isinstance(klass, type)
@@ -26,10 +28,10 @@ def verify_class_logic(klass):
     assert "x" == str(p3)
 
     p4 = p2 / p3
-    assert "./x" == str(p4)
+    assert f".{SEP}x" == str(p4)
 
     p5 = p3 / p1 / p2
-    assert "x/." == str(p5)
+    assert f"x{SEP}." == str(p5)
 
 
 def verify_class(klass):
