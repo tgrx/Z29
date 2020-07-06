@@ -1,4 +1,4 @@
-HERE := $(shell pwd)
+HERE := .
 VENV := $(shell pipenv --venv)
 SRC := ${HERE}
 PYTHONPATH := ${SRC}
