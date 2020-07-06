@@ -1,4 +1,4 @@
-HERE := .
+HERE := ${CURDIR}
 VENV := $(shell pipenv --venv)
 SRC := ${HERE}
 PYTHONPATH := ${SRC}
