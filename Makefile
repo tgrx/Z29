@@ -27,3 +27,12 @@ qa:
 	${RUN} isort --virtual-env "${VENV}" --recursive --check-only "${HERE}"
 	${RUN} flake8
 	${RUN} pylint solutions/ checks/
+
+
+.PHONY: wqa
+wqa:
+	pytest checks/
+	black --check .
+	isort --virtual-env "${VENV}" --recursive --check-only "${HERE}"
+	flake8
+	pylint solutions/ checks/
