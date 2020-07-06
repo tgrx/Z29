@@ -20,7 +20,7 @@ format:
 
 
 .PHONY: wformat
-format:
+wformat:
 	isort --virtual-env "${VENV}" --recursive --apply "${HERE}"
 	black "${HERE}"
 
