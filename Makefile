@@ -19,6 +19,12 @@ format:
 	${RUN} black "${HERE}"
 
 
+.PHONY: wformat
+format:
+	isort --virtual-env "${VENV}" --recursive --apply "${HERE}"
+	black "${HERE}"
+
+
 .PHONY: qa
 qa:
 	@${VERIFY_USERNAMES}
