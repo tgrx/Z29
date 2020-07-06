@@ -1,7 +1,7 @@
-from .level01 import User
+from .level01 import User as MetaUser
 
 
-class User(User):
+class User(MetaUser):
     def __init__(self, name, email):
         self.name = name
         self.email = email
