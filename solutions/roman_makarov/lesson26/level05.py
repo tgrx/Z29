@@ -7,6 +7,6 @@ def get_change(amount):
     for note, cost in sorted(COINAGE.items(), key=lambda i: -i[1]):
         number = int(amount // cost)
         bills[note] = number
-        amount -= cost*number
+        amount -= cost * number
 
     return bills
