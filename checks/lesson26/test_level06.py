@@ -28,8 +28,9 @@ def verify_module(module, dataset):
 
     obj = ContactBook()
     result = []
+    data, expected = dataset
 
-    for line in dataset[1:]:
+    for line in data:
         op, contact = line.split()
         if op == "add":
             obj.add(contact)
@@ -38,7 +39,7 @@ def verify_module(module, dataset):
             n = obj.find(contact)
             result.append(n)
 
-    assert result == [2, 0]
+    assert result == expected
 
 
 def test(modules_level06, dataset_contacts_short):
