@@ -11,6 +11,10 @@ def verify(module):
     assert lst1 == [3, 4, 5, 1, 2]
     assert lst0 is not lst1
 
+    lst1 = rotate_left(lst0, 1000 * len(lst0))
+    assert lst1 == lst0
+    assert lst1 is not lst0
+
 
 def test(modules_level02):
     for module in modules_level02.values():
