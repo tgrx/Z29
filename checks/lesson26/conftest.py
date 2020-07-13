@@ -57,3 +57,15 @@ def modules_level07() -> Dict[Text, Any]:
 @pytest.fixture
 def modules_level08() -> Dict[Text, Any]:
     return find_modules_for_level("level08")
+
+
+@pytest.fixture
+def dataset_contacts_short():
+    lines = [
+        "add dead",
+        "add deadbeef",
+        "find dead",
+        "find x",
+    ]
+
+    return lines, [2, 0]
