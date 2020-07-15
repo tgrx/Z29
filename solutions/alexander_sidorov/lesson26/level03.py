@@ -1,2 +1,2 @@
-def key(i):
-    return i
+def key(arg):
+    return arg
