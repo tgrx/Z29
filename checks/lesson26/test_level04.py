@@ -36,7 +36,7 @@ def verify(module):
         expected = sorted(data)
         got = sorted(data, key=key)
         corr = correlate(expected, got)
-        assert corr < 0.1, f"sort mismatch on data `{data[:10]}...`"
+        assert corr < 0.02, f"sort mismatch on data `{data[:10]}...`"
 
 
 def test(modules_level04):
